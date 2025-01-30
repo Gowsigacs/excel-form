@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Hardcoded login validation (You can change this)
+            if (username === "Gowshi" && password === "123") {
+                alert("Login successful!");
+                window.location.href = "excel-form.html"; // Redirect to the Excel form
+            } else {
+                alert("Invalid username or password. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
